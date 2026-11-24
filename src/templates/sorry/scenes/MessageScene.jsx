@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import SceneWrapper from "../components/SceneWrapper";
-import NextButton from "../components/NextButton";
+import SceneWrapper from "../../../shared/components/SceneWrapper";
+import NextButton from "../../../shared/components/NextButton";
 
 export default function MessageScene({ data, onNext }) {
   const [typed, setTyped] = useState("");

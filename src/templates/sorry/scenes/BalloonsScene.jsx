@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import SceneWrapper from "../components/SceneWrapper";
-import NextButton from "../components/NextButton";
+import SceneWrapper from "../../../shared/components/SceneWrapper";
+import NextButton from "../../../shared/components/NextButton";
 
 const colors = [
   "bg-pink-400",
