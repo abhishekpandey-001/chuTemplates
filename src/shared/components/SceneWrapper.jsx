@@ -1,7 +1,10 @@
-import { useMemo } from "react";
+import { useMemo, useContext } from "react";
 import { motion } from "framer-motion";
+import { ThemeContext } from "../ThemeContext";
 
 export default function SceneWrapper({ children }) {
+  const { bg, floater } = useContext(ThemeContext);
+
   const hearts = useMemo(
     () =>
       Array.from({ length: 14 }, (_, i) => ({
@@ -11,12 +14,12 @@ export default function SceneWrapper({ children }) {
         duration: 8 + Math.random() * 8,
         delay: Math.random() * 6,
       })),
-    [],
+    []
   );
 
   return (
     <motion.div
-      className="relative min-h-full w-full overflow-hidden bg-gradient-to-br from-pink-100 via-rose-100 to-pink-200 flex items-center justify-center p-4"
+      className={`relative min-h-full w-full overflow-hidden ${bg} flex items-center justify-center p-4`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -35,7 +38,7 @@ export default function SceneWrapper({ children }) {
             ease: "linear",
           }}
         >
-          💗
+          {floater}
         </motion.span>
       ))}
 

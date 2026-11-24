@@ -8,8 +8,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/preview" element={<Preview />} />
-        <Route path="/create" element={<Create />} />
+        <Route path="/template/:id/preview" element={<Preview />} />
+        <Route path="/template/:id/create" element={<Create />} />
       </Routes>
     </BrowserRouter>
   );

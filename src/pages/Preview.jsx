@@ -1,10 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import SceneFlow from "../components/SceneFlow";
-import { data } from "../data/mockData";
+import SceneFlow from "../shared/components/SceneFlow";
+import { getTemplate } from "../templates";
 
 export default function Preview() {
   const navigate = useNavigate();
+  const { id } = useParams();
+  const template = getTemplate(id);
+
+  if (!template) return <Navigate to="/" replace />;
 
   return (
     <div className="relative h-screen w-full overflow-y-auto">
@@ -14,7 +18,11 @@ export default function Preview() {
       >
         <ArrowLeft size={14} /> Back
       </button>
-      <SceneFlow data={data} />
+      <SceneFlow
+        scenes={template.scenes}
+        theme={template.theme}
+        data={template.mockData}
+      />
     </div>
   );
 }

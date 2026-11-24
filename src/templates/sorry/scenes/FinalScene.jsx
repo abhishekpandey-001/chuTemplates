@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { RotateCcw } from "lucide-react";
-import SceneWrapper from "../components/SceneWrapper";
+import SceneWrapper from "../../../shared/components/SceneWrapper";
 
 export default function FinalScene({ data, onReplay }) {
   useEffect(() => {

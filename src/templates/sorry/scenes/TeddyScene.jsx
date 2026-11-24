@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import SceneWrapper from "../components/SceneWrapper";
+import SceneWrapper from "../../../shared/components/SceneWrapper";
 
 export default function TeddyScene({ data, onNext }) {
   const [entering, setEntering] = useState(false);
