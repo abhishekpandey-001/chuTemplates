@@ -1,6 +1,6 @@
 export const data = {
-  senderName: "Manu",
-  receiverName: "Riya",
+  senderName: "Deepak",
+  receiverName: "Sakshi",
 
   fromCity: "Delhi",
   toCity: "Mumbai",
