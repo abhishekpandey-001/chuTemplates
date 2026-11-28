@@ -31,7 +31,7 @@ export default {
       title: "Who is this for?",
       scene: 0,
       fields: [
-        { key: "senderName", label: "Your name", placeholder: "Manu", required: true },
+        { key: "senderName", label: "Your name", placeholder: "Deepak", required: true },
         { key: "receiverName", label: "Their name", placeholder: "Riya", required: true },
       ],
     },
